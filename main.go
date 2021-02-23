@@ -62,6 +62,9 @@ func main(){
 	s:=NewRuneScanner(strings.NewReader("Hello,WorldNaga"))
 	for{
 		r,err:=s.Scan()
+
+		//エラー処理を、まとめて、一箇所に書いている
+		//多分、エラー処理を一度に同時にやれ、というわけではないと思う
 		if err==io.EOF{
 			break
 		}
